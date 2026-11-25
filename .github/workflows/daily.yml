@@ -44,12 +44,19 @@ jobs:
           echo "tag=$TAG" >> $GITHUB_OUTPUT
           curl -fsSL --retry 5 --retry-delay 3 "$URL" -o /tmp/qdb.zip
           unzip -q -o /tmp/qdb.zip -d build/upstream/
-          # 兼容顶层目录名变化（QuestieDB/ 或带版本号），自动定位主 toc
+          # 兼容顶层目录名变化（QuestieDB/ 或 QuestieDB-1.1.6/ 等），把整个根目录规范化为 upstream/QuestieDB/
           TOC=$(find build/upstream -name 'QuestieDB_Forever.toc' | head -1)
-          test -n "$TOC" && cp "$TOC" build/upstream/QuestieDB/QuestieDB_Forever.toc
-          echo "toc=$TOC"
-          test -f build/upstream/QuestieDB/support/Forever/Zones/areaIdToUiMapId.lua
-          test -f build/upstream/QuestieDB/support/Forever/QuestXP/xpDB-classic.lua
+          test -n "$TOC" || { echo 'QuestieDB_Forever.toc not found'; exit 1; }
+          QDIR=$(dirname "$TOC")
+          DEST='build/upstream/QuestieDB'
+          if [ "$QDIR" != "$DEST" ]; then
+            rm -rf "$DEST"
+            mv "$QDIR" "$DEST"
+          fi
+          echo "QuestieDB root: $QDIR -> $DEST"
+          test -f "$DEST/QuestieDB_Forever.toc"
+          test -f "$DEST/support/Forever/Zones/areaIdToUiMapId.lua"
+          test -f "$DEST/support/Forever/QuestXP/xpDB-classic.lua"
 
       - name: Download item quality tables
         run: |
