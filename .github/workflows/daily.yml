@@ -117,8 +117,8 @@ jobs:
       - name: Publish to repo root for qg_sync
         run: |
           set -euo pipefail
+          # meta.json 已由 full_build.py --meta-out ../meta.json 直接写到根目录（同步入口），无需再 cp
           cp build/QuestGearData.lua ./QuestGearData.lua
-          cp meta.json ./meta.json
 
       # ---------- 5. 内容变化才提交 ----------
       - name: Commit if changed
