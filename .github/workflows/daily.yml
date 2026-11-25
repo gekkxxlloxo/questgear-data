@@ -1,0 +1,122 @@
+name: Daily QuestGear Data Rebuild
+
+# 每天从上游重新爬取全部数据源，交叉重建 QuestGear 的 9+6 张数据表。
+# 无限服(Forever)客户端数据会随 QuestieDB Forever release 更新，本工作流保证跟随。
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 每天 UTC 03:00 = 北京时间 11:00
+  workflow_dispatch:      # 允许手动触发（改了构建逻辑后可立即重刷）
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-rebuild
+  cancel-in-progress: false   # 不取消正在跑的构建，避免半成品提交
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install cbor2
+
+      # ---------- 1. 下载在线数据源 ----------
+      - name: Download QuestieDB Forever (latest release)
+        id: qdb
+        run: |
+          set -euo pipefail
+          mkdir -p build/upstream
+          # 取最新 release，资产名以 -Forever.zip 结尾；兼容 v1.1.6 等命名
+          curl -fsSL --retry 5 --retry-delay 3 \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/Questie/QuestieDB/releases/latest -o /tmp/rel.json
+          TAG=$(python3 -c "import json;print(json.load(open('/tmp/rel.json'))['tag_name'])")
+          URL=$(python3 -c "import json,sys;d=json.load(open('/tmp/rel.json'));a=[x for x in d['assets'] if x['name'].endswith('-Forever.zip')];assert a,'no Forever asset';print(a[0]['browser_download_url'])" )
+          echo "QuestieDB $TAG -> $URL"
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+          curl -fsSL --retry 5 --retry-delay 3 "$URL" -o /tmp/qdb.zip
+          unzip -q -o /tmp/qdb.zip -d build/upstream/
+          # 兼容顶层目录名变化（QuestieDB/ 或带版本号），自动定位主 toc
+          TOC=$(find build/upstream -name 'QuestieDB_Forever.toc' | head -1)
+          test -n "$TOC" && cp "$TOC" build/upstream/QuestieDB/QuestieDB_Forever.toc
+          echo "toc=$TOC"
+          test -f build/upstream/QuestieDB/support/Forever/Zones/areaIdToUiMapId.lua
+          test -f build/upstream/QuestieDB/support/Forever/QuestXP/xpDB-classic.lua
+
+      - name: Download item quality tables
+        run: |
+          set -euo pipefail
+          # full_build.py 读 upstream/，build_stats.py 读 build/ 根，两处都放
+          curl -fsSL --retry 5 --retry-delay 3 \
+            https://raw.githubusercontent.com/sml86/wow-classic-items/master/data/json/data.json \
+            -o build/upstream/quality-full.json
+          curl -fsSL --retry 5 --retry-delay 3 \
+            https://raw.githubusercontent.com/JollyGrin/wow-bis/master/public/items.json \
+            -o build/upstream/quality.json
+          cp build/upstream/quality-full.json build/items-quality-full.json
+          cp build/upstream/quality.json build/items-quality.json
+
+      # CMaNGOS SQL + 3 份 locale 由 build_sources.py 自带下载器负责（jsDelivr，稳定）；
+      # locales_quest_zh.sql / CharStartOutfit.dbc / QuestDB.zip / wclbox图鉴 无公开URL，
+      # 作为基线资产已在 build/_research/ 随仓库保存，不每日重爬（它们是静态事实数据）。
+
+      # ---------- 2. 按依赖顺序重建全部表 ----------
+      - name: Build all tables
+        run: |
+          set -euo pipefail
+          cd build
+          VERSION="qg-${{ steps.qdb.outputs.tag }}"
+          echo "building version=$VERSION"
+          # ① 主数据 9 张表（QuestieDB + 品质库）
+          python3 full_build.py --meta-out ../meta.json --version "$VERSION"
+          # ②~⑦ 其余 6 张表：Data -> Sources -> Crafts -> Special -> LostItems；QuestInfo/Stats 只依赖 Data
+          python3 build_stats.py
+          python3 build_quest_info.py
+          python3 build_sources.py                     # 自带下载器从 jsDelivr 补 SQL；4 份 locale 基线已有会跳过
+          python3 build_crafts.py                      # 依赖 Sources + QuestDB.zip（基线）
+          python3 build_special.py                     # 依赖 Sources + Crafts，产出 StartItems/Extras
+          python3 build_lost_items.py                  # 依赖 Special 的清单，重写 Extras
+
+      # ---------- 3. 校验（失败则不提交）----------
+      - name: Verify data integrity
+        run: |
+          set -euo pipefail
+          cd build
+          # --file + --skip-source：只校验数据结构本身；版本一致性由 meta.json 与提交步骤保证
+          python3 verify_data.py --file QuestGearData.lua --skip-source || { echo "verify_data failed"; exit 1; }
+          # 阵营字段必须存在（旧版 CI 构建脚本曾漏 f=，导致阵营过滤失效）
+          python3 - <<'PY'
+          import re
+          s = open('QuestGearData.lua', encoding='utf-8').read()
+          n = len(re.findall(r'f=\d', s))
+          assert n > 1000, f'阵营字段 f= 仅 {n} 条，疑似旧版构建脚本，中止提交'
+          print(f'阵营字段 f= 覆盖 {n} 条，OK')
+          PY
+
+      # ---------- 4. 同步到根目录（本地 qg_sync.py 从根目录拉这两个文件，必须兼容）----------
+      - name: Publish to repo root for qg_sync
+        run: |
+          set -euo pipefail
+          cp build/QuestGearData.lua ./QuestGearData.lua
+          cp meta.json ./meta.json
+
+      # ---------- 5. 内容变化才提交 ----------
+      - name: Commit if changed
+        run: |
+          git config user.name 'QuestGear Bot'
+          git config user.email 'bot@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'no content change, skip'
+          else
+            git commit -m "Data rebuild: ${{ steps.qdb.outputs.tag }} ($(date -u +%Y-%m-%d))"
+            git push
+          fi

@@ -1,0 +1,13 @@
+# CI 运行时下载的源数据（每次重建都会重新拉取，不入库）
+build/upstream/
+# 品质库 JSON（合计 31MB，CI 每次下载到 build/ 根 + upstream/）
+build/items-quality-full.json
+build/items-quality.json
+# 本地测试/解压临时文件
+*.part
+*.tmp
+__pycache__/
+*.pyc
+# CMaNGOS SQL 明文与压缩包由 build_sources.py 运行时生成（13MB），不入库
+build/_research/ClassicDB_base.sql
+build/_research/ClassicDB_base.sql.gz

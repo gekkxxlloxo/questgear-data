@@ -1,0 +1,283 @@
+QuestGear：CMaNGOS 中查不到投放关联的装备分类清单
+生成时间：2026-11-25 23:20:52
+分类依据：物品英文名/中文名关键字机械匹配（不采信未证实的证据链）。
+说明：原版经典服无正常获取途径；私服若放出，位置由服主自定义，开源库查不到。
+      共 267 件，分类统计见下。可把本清单按分类交给豆包逐批核对。
+
+分类统计：
+  GM测试  3 件
+  开发占位  1 件
+  荣誉军衔  109 件
+  节日/玩具  34 件
+  血帆声望  3 件
+  测试/模型  12 件
+  废弃未实装  105 件
+
+ID	分类	中文名	英文名	装等	需求等级
+876	废弃未实装	用旧的木制圆盾	Worn Wooden Buckler	1	1
+913	废弃未实装	食人魔巨剑	Huge Ogre Sword	29	24
+945	测试/模型	Shadow Sword	Shadow Sword	1	1
+948	测试/模型	Nature Sword	Nature Sword	1	1
+1189	废弃未实装	监工指环	Overseer's Ring	20	15
+1216	测试/模型	Frost Bracers	Frost Bracers	33	28
+1386	废弃未实装	棘木战斧	Thistlewood Axe	5	0
+2016	废弃未实装	生锈的链甲	Dusty Chain Armor	26	21
+2056	废弃未实装	The Velvet Hammer	The Velvet Hammer	10	5
+2273	废弃未实装	游击队护甲	Guerrilla Armor	15	10
+2410	废弃未实装	冒烟的火炬	Smoky Torch	1	0
+2586	GM测试	GM的长袍	Gamemaster's Robe	1	0
+2664	废弃未实装	纺织者之牙	Spinner Fang	18	13
+3028	废弃未实装	Longbow	Longbow	34	29
+3222	废弃未实装	邪恶匕首	Wicked Dagger	19	14
+3278	测试/模型	Aura Proc Damage Sword	Aura Proc Damage Sword	30	25
+3535	废弃未实装	Red Leather C03 Bracers	Red Leather C03 Bracers	1	1
+3545	废弃未实装	Black Leather D02 Bracers	Black Leather D02 Bracers	1	1
+3738	废弃未实装	酿酒棒	Brewing Rod	25	0
+3953	废弃未实装	网孔长靴	Mesh Boots	64	59
+3954	废弃未实装	网孔护腕	Mesh Bracers	65	60
+3955	废弃未实装	网孔披风	Mesh Cloak	62	57
+3956	废弃未实装	网孔手套	Mesh Gloves	63	58
+3977	废弃未实装	缀皮腰带	Strapped Belt	63	58
+3980	废弃未实装	缀皮披风	Strapped Cloak	62	57
+3983	废弃未实装	缀皮护肩	Strapped Shoulderpads	65	60
+3984	废弃未实装	缀皮护甲	Strapped Armor	64	59
+3988	废弃未实装	宽墙盾	Plate Wall Shield	65	60
+4008	废弃未实装	纯银链甲腰带	Sterling Chain Belt	63	58
+4009	废弃未实装	纯银链甲战靴	Sterling Chain Boots	65	60
+4013	废弃未实装	纯银链甲短裤	Sterling Chain Pants	64	59
+4015	废弃未实装	纯银链甲	Sterling Chain Armor	62	57
+4116	废弃未实装	奥尔曼·塞瓦	Olmann Sewar	41	0
+4190	废弃未实装	Feathered Armor	Feathered Armor	27	22
+4194	废弃未实装	Feathered Bracers	Feathered Bracers	27	22
+4195	废弃未实装	Feathered Boots	Feathered Boots	27	22
+4728	测试/模型	Twain's Shoulder	Twain's Shoulder	0	0
+4988	废弃未实装	炙热黑耀石指环	Burning Obsidian Band	50	0
+4989	废弃未实装	龙法师长袍	Mage Dragon Robe	50	0
+4990	废弃未实装	焦痕护腕	Scorched Bands	50	0
+5004	废弃未实装	肯瑞托的印记	Mark of the Kirin Tor	35	30
+5005	废弃未实装	余烬火花坠饰	Emberspark Pendant	35	30
+5010	废弃未实装	铭文黄金戒指	Inscribed Gold Ring	40	35
+5255	废弃未实装	野猪人轻斧	Quilboar Tomahawk	15	10
+5742	废弃未实装	宝钻匕首	Gemstone Dagger	40	35
+5743	废弃未实装	棱柱石戒	Prismstone Ring	40	35
+5748	废弃未实装	半人马长弓	Centaur Longbow	16	11
+5821	废弃未实装	夜路长靴	Darkstalker Boots	24	0
+5822	废弃未实装	树种护手	Hedgeseed Gauntlets	24	0
+5968	废弃未实装	皱褶之靴	Rugged Boots	15	10
+5971	废弃未实装	羽饰斗篷	Feathered Cape	26	21
+6174	测试/模型	Twain Random Sword	Twain Random Sword	20	15
+6360	废弃未实装	钢鳞鱼	Steelscale Crushfish	25	20
+6366	废弃未实装	暗木鱼竿	Darkwood Fishing Pole	20	15
+6478	废弃未实装	踏鼠靴	Rat Stompers	23	0
+6651	废弃未实装	破酒瓶	Broken Wine Bottle	12	7
+6836	废弃未实装	礼服鞋	Dress Shoes	1	0
+7170	测试/模型	Twain Random Sword FOO	Twain Random Sword FOO	20	15
+7188	废弃未实装	暴风城卫兵之盾	Stormwind Guard Shield	24	19
+7338	节日/玩具	心境之戒	Mood Ring	10	0
+7549	废弃未实装	仙女的拥抱	Fairy's Embrace	47	42
+7550	荣誉军衔	Warrior's Honor	Warrior's Honor	47	42
+7551	废弃未实装	白石护符	Entwined Opaline Talisman	47	42
+7996	节日/玩具	破旧的渔帽	Lucky Fishing Hat	20	15
+8350	废弃未实装	至尊一戒	The 1 Ring	15	10
+9653	废弃未实装	赛车护目镜	Speedy Racer Goggles	50	0
+10780	废弃未实装	哈卡印记	Mark of Hakkar	55	0
+10781	废弃未实装	哈卡莱胸甲	Hakkari Breastplate	55	0
+10782	废弃未实装	哈卡莱头巾	Hakkari Shroud	55	0
+11199	测试/模型	Engineer's Shield 1	Engineer's Shield 1	1	1
+11200	测试/模型	Engineer's Shield 2	Engineer's Shield 2	1	1
+11201	测试/模型	Engineer's Shield 3	Engineer's Shield 3	1	1
+11508	GM测试	Gamemaster's Slippers	Gamemaster's Slippers	1	0
+11743	废弃未实装	岩拳	Rockfist	55	50
+11768	废弃未实装	易然护腕	Incendic Bracers	57	52
+12064	GM测试	Gamemaster Hood	Gamemaster Hood	1	0
+12104	废弃未实装	斑棘外套	Brindlethorn Tunic	60	0
+12105	废弃未实装	强链护腿	Pridemail Leggings	60	0
+12106	废弃未实装	石皮胸甲	Boulderskin Breastplate	60	0
+12107	废弃未实装	轻丝护腿	Whispersilk Leggings	60	0
+12257	废弃未实装	重型锯齿腰带	Heavy Notched Belt	42	37
+12258	废弃未实装	毒蛇腰带	Serpent Clasp Belt	44	39
+12446	废弃未实装	安威玛火枪	Anvilmar Musket	5	0
+12447	废弃未实装	棘木弓	Thistlewood Bow	5	0
+12448	废弃未实装	轻型猎枪	Light Hunting Rifle	5	0
+12449	废弃未实装	粗糙的短弓	Primitive Bow	5	0
+12468	测试/模型	Chilton Wand	Chilton Wand	53	1
+12469	废弃未实装	切割者	Mutilator	47	42
+12588	废弃未实装	骨刺护肩	Bonespike Shoulder	63	58
+12615	废弃未实装	野蛮锁甲外套	Savage Mail Tunic	62	57
+12616	废弃未实装	野蛮锁甲战靴	Savage Mail Boots	63	58
+12617	废弃未实装	野蛮锁甲护肩	Savage Mail Shoulders	63	58
+12805	测试/模型	Orb of Fire	Orb of Fire	46	0
+13080	废弃未实装	寡妇蛛袍	Widow's Clutch	63	58
+13090	废弃未实装	天选者胸甲	Breastplate of the Chosen	63	58
+13148	废弃未实装	刺骨冰矛	Chillpike	61	56
+13164	废弃未实装	龙鳞之心	Heart of the Scale	61	56
+13175	废弃未实装	沃恩的迅捷弓	Voone's Twitchbow	60	55
+13811	废弃未实装	Necklace of the Dawn	Necklace of the Dawn	60	0
+13812	废弃未实装	黎明之戒	Ring of the Dawn	58	0
+13950	废弃未实装	拘禁束带	Detention Strap	62	57
+14550	废弃未实装	折刃护臂	Bladebane Armguards	49	44
+16036	荣誉军衔	PVP Cloth Robe Horde	PVP Cloth Robe Horde	60	0
+16037	荣誉军衔	PVP Cloth Legs Horde	PVP Cloth Legs Horde	60	0
+16369	荣誉军衔	骑士中尉的丝质长靴	Knight-Lieutenant's Silk Boots	63	58
+16391	荣誉军衔	骑士中尉的丝质手套	Knight-Lieutenant's Silk Gloves	63	58
+16392	荣誉军衔	骑士中尉的皮甲战靴	Knight-Lieutenant's Leather Boots	63	58
+16393	荣誉军衔	骑士中尉的龙皮裹足	Knight-Lieutenant's Dragonhide Footwraps	63	58
+16396	荣誉军衔	骑士中尉的皮甲护手	Knight-Lieutenant's Leather Gauntlets	63	58
+16397	荣誉军衔	骑士中尉的龙皮手套	Knight-Lieutenant's Dragonhide Gloves	63	58
+16401	荣誉军衔	骑士中尉的链甲战靴	Knight-Lieutenant's Chain Boots	63	58
+16403	荣誉军衔	骑士中尉的链甲护手	Knight-Lieutenant's Chain Gauntlets	63	58
+16405	荣誉军衔	骑士队长的板甲战靴	Knight-Lieutenant's Plate Boots	63	58
+16406	荣誉军衔	骑士队长的板甲护手	Knight-Lieutenant's Plate Gauntlets	63	58
+16409	荣誉军衔	骑士中尉的板层甲马靴	Knight-Lieutenant's Lamellar Sabatons	63	58
+16410	荣誉军衔	骑士中尉的板层甲护手	Knight-Lieutenant's Lamellar Gauntlets	63	58
+16413	荣誉军衔	骑士队长的丝质外衣	Knight-Captain's Silk Raiment	63	58
+16414	荣誉军衔	骑士队长的丝质护腿	Knight-Captain's Silk Leggings	63	58
+16415	荣誉军衔	少校的丝质肩甲	Lieutenant Commander's Silk Spaulders	63	58
+16417	荣誉军衔	骑士队长的皮甲护胸	Knight-Captain's Leather Armor	63	58
+16418	荣誉军衔	少校的皮甲面罩	Lieutenant Commander's Leather Veil	63	58
+16419	荣誉军衔	骑士队长的皮甲护腿	Knight-Captain's Leather Legguards	63	58
+16420	荣誉军衔	少校的皮甲肩铠	Lieutenant Commander's Leather Spaulders	63	58
+16421	荣誉军衔	骑士队长的龙皮外套	Knight-Captain's Dragonhide Tunic	63	58
+16422	荣誉军衔	骑士队长的龙皮护腿	Knight-Captain's Dragonhide Leggings	63	58
+16423	荣誉军衔	少校的龙皮肩铠	Lieutenant Commander's Dragonhide Epaulets	63	58
+16424	荣誉军衔	少校的龙皮披风	Lieutenant Commander's Dragonhide Shroud	63	58
+16425	荣誉军衔	骑士队长的链甲护胸	Knight-Captain's Chain Hauberk	63	58
+16426	荣誉军衔	骑士队长的链甲护腿	Knight-Captain's Chain Leggings	63	58
+16427	荣誉军衔	少校的链甲肩铠	Lieutenant Commander's Chain Pauldrons	63	58
+16428	荣誉军衔	少校的链甲罩盔	Lieutenant Commander's Chain Helmet	63	58
+16429	荣誉军衔	护卫骑士的板甲头盔	Lieutenant Commander's Plate Helm	63	58
+16430	荣誉军衔	护卫骑士的板甲护胸	Knight-Captain's Plate Chestguard	63	58
+16431	荣誉军衔	护卫骑士的板甲护腿	Knight-Captain's Plate Leggings	63	58
+16432	荣誉军衔	护卫骑士的板甲肩铠	Lieutenant Commander's Plate Pauldrons	63	58
+16433	荣誉军衔	骑士队长的板层甲护胸	Knight-Captain's Lamellar Breastplate	63	58
+16434	荣誉军衔	少校的板层甲头盔	Lieutenant Commander's Lamellar Headguard	63	58
+16435	荣誉军衔	骑士队长的板层甲护腿	Knight-Captain's Lamellar Leggings	63	58
+16436	荣誉军衔	少校的板层甲护肩	Lieutenant Commander's Lamellar Shoulders	63	58
+16485	荣誉军衔	血卫士的丝质裹足	Blood Guard's Silk Footwraps	63	58
+16487	荣誉军衔	血卫士的丝质手套	Blood Guard's Silk Gloves	63	58
+16489	荣誉军衔	勇士的丝质兜帽	Champion's Silk Hood	63	58
+16490	荣誉军衔	军团士兵的丝质短裤	Legionnaire's Silk Pants	63	58
+16491	荣誉军衔	军团士兵的丝质长袍	Legionnaire's Silk Robes	63	58
+16492	荣誉军衔	勇士的丝质护肩	Champion's Silk Shoulderpads	63	58
+16494	荣誉军衔	血卫士的龙皮战靴	Blood Guard's Dragonhide Boots	63	58
+16496	荣誉军衔	血卫士的龙皮护手	Blood Guard's Dragonhide Gauntlets	63	58
+16498	荣誉军衔	血卫士的皮甲长靴	Blood Guard's Leather Treads	63	58
+16499	荣誉军衔	血卫士的皮甲手套	Blood Guard's Leather Vices	63	58
+16501	荣誉军衔	勇士的龙皮肩甲	Champion's Dragonhide Spaulders	63	58
+16502	荣誉军衔	军团士兵的龙皮长裤	Legionnaire's Dragonhide Trousers	63	58
+16503	荣誉军衔	勇士的龙皮头盔	Champion's Dragonhide Helm	63	58
+16504	荣誉军衔	军团士兵的龙皮胸甲	Legionnaire's Dragonhide Breastplate	63	58
+16505	荣誉军衔	军团士兵的皮甲胸衣	Legionnaire's Leather Hauberk	63	58
+16506	荣誉军衔	勇士的皮甲罩帽	Champion's Leather Headguard	63	58
+16507	荣誉军衔	勇士的皮甲衬肩	Champion's Leather Mantle	63	58
+16508	荣誉军衔	军团士兵的皮甲腿胄	Legionnaire's Leather Leggings	63	58
+16509	荣誉军衔	血卫士的板甲重靴	Blood Guard's Plate Boots	63	58
+16510	荣誉军衔	血卫士的板甲手套	Blood Guard's Plate Gloves	63	58
+16513	荣誉军衔	军团士兵的板甲护胸	Legionnaire's Plate Armor	63	58
+16514	荣誉军衔	勇士的板甲重盔	Champion's Plate Headguard	63	58
+16515	荣誉军衔	军团士兵的板甲腿铠	Legionnaire's Plate Legguards	63	58
+16516	荣誉军衔	勇士的板甲肩铠	Champion's Plate Pauldrons	63	58
+16518	荣誉军衔	血卫士的锁甲重靴	Blood Guard's Mail Walkers	63	58
+16519	荣誉军衔	血卫士的锁甲护手	Blood Guard's Mail Grips	63	58
+16521	荣誉军衔	勇士的锁甲盔帽	Champion's Mail Helm	63	58
+16522	荣誉军衔	军团士兵的锁甲护胸	Legionnaire's Mail Chestpiece	63	58
+16523	荣誉军衔	军团士兵的锁甲护腿	Legionnaire's Mail Leggings	63	58
+16524	荣誉军衔	勇士的锁甲护肩	Champion's Mail Shoulders	63	58
+16525	荣誉军衔	军团士兵的链甲	Legionnaire's Chain Breastplate	63	58
+16526	荣誉军衔	勇士的链甲盔帽	Champion's Chain Headguard	63	58
+16527	荣誉军衔	军团士兵的链甲腿铠	Legionnaire's Chain Leggings	63	58
+16528	荣誉军衔	勇士的链甲肩铠	Champion's Chain Pauldrons	63	58
+16530	荣誉军衔	血卫士的链甲护手	Blood Guard's Chain Gauntlets	63	58
+16531	荣誉军衔	血卫士的链甲战靴	Blood Guard's Chain Boots	63	58
+17000	废弃未实装	Band of the Wraith	Band of the Wraith	62	0
+17562	荣誉军衔	骑士中尉的鬼纹长靴	Knight-Lieutenant's Dreadweave Boots	63	58
+17564	荣誉军衔	骑士中尉的鬼纹手套	Knight-Lieutenant's Dreadweave Gloves	63	58
+17566	荣誉军衔	少校的头盔	Lieutenant Commander's Headguard	63	58
+17567	荣誉军衔	骑士队长的鬼纹护腿	Knight-Captain's Dreadweave Leggings	63	58
+17568	荣誉军衔	骑士队长的鬼纹长袍	Knight-Captain's Dreadweave Robe	63	58
+17569	荣誉军衔	少校的鬼纹衬肩	Lieutenant Commander's Dreadweave Mantle	63	58
+17570	荣誉军衔	勇士的鬼纹罩帽	Champion's Dreadweave Hood	63	58
+17571	荣誉军衔	军团士兵的鬼纹长裤	Legionnaire's Dreadweave Leggings	63	58
+17572	荣誉军衔	军团士兵的鬼纹长袍	Legionnaire's Dreadweave Robe	63	58
+17573	荣誉军衔	勇士的鬼纹护肩	Champion's Dreadweave Shoulders	63	58
+17576	荣誉军衔	血卫士的鬼纹软靴	Blood Guard's Dreadweave Boots	63	58
+17577	荣誉军衔	血卫士的鬼纹手套	Blood Guard's Dreadweave Gloves	63	58
+17594	荣誉军衔	骑士中尉的绸缎长靴	Knight-Lieutenant's Satin Boots	63	58
+17596	荣誉军衔	骑士中尉的绸缎手套	Knight-Lieutenant's Satin Gloves	63	58
+17598	荣誉军衔	少校的头冠	Lieutenant Commander's Diadem	63	58
+17599	荣誉军衔	护卫骑士的绸缎护腿	Knight-Captain's Satin Leggings	63	58
+17600	荣誉军衔	骑士队长的绸缎长袍	Knight-Captain's Satin Robes	63	58
+17601	荣誉军衔	少校的绸缎披肩	Lieutenant Commander's Satin Amice	63	58
+17610	荣誉军衔	勇士的绸缎兜帽	Champion's Satin Cowl	63	58
+17611	荣誉军衔	百夫长的绸缎长裤	Legionnaire's Satin Trousers	63	58
+17612	荣誉军衔	百夫长的绸缎外套	Legionnaire's Satin Vestments	63	58
+17613	荣誉军衔	勇士的绸缎护肩	Champion's Satin Shoulderpads	63	58
+17616	荣誉军衔	血卫士的绸缎软靴	Blood Guard's Satin Boots	63	58
+17617	荣誉军衔	血卫士的绸缎手套	Blood Guard's Satin Gloves	63	58
+17982	废弃未实装	拉格纳罗斯之核	Ragnaros Core	65	60
+18438	荣誉军衔	Sergeant's Mark	Sergeant's Mark	40	35
+18807	废弃未实装	潜能头盔	Helm of Latent Power	62	0
+19105	废弃未实装	冰霜符文坠饰	Frost Runed Headdress	63	58
+19110	废弃未实装	极寒之刃	Cold Forged Blade	63	58
+19160	荣誉军衔	冠军战袍	Contest Winner's Tabard	1	0
+20177	荣誉军衔	污染者的板层甲束带	Defiler's Lamellar Girdle	63	58
+20178	荣誉军衔	污染者的板层甲束带	Defiler's Lamellar Girdle	33	28
+20179	荣誉军衔	污染者的板层甲束带	Defiler's Lamellar Girdle	53	48
+20180	荣誉军衔	污染者的板层甲束带	Defiler's Lamellar Girdle	43	40
+20181	荣誉军衔	污染者的板层甲护胫	Defiler's Lamellar Greaves	63	58
+20182	荣誉军衔	污染者的板层甲护胫	Defiler's Lamellar Greaves	33	28
+20183	荣誉军衔	污染者的板层甲护胫	Defiler's Lamellar Greaves	43	40
+20184	荣誉军衔	污染者的板层甲护肩	Defiler's Lamellar Spaulders	65	60
+20185	荣誉军衔	污染者的板层甲护胫	Defiler's Lamellar Greaves	53	48
+20391	节日/玩具	男性侏儒面具	Flimsy Male Gnome Mask	1	0
+20392	节日/玩具	女性侏儒面具	Flimsy Female Gnome Mask	1	0
+20522	废弃未实装	野性法杖	Feral Staff	52	0
+20525	废弃未实装	Earthen Sigil	Earthen Sigil	52	0
+20561	节日/玩具	男性矮人面具	Flimsy Male Dwarf Mask	1	0
+20562	节日/玩具	女性矮人面具	Flimsy Female Dwarf Mask	1	0
+20563	节日/玩具	女性暗夜精灵面具	Flimsy Female Nightelf Mask	1	0
+20564	节日/玩具	男性暗夜精灵面具	Flimsy Male Nightelf Mask	1	0
+20565	节日/玩具	女性人类面具	Flimsy Female Human Mask	1	0
+20566	节日/玩具	男性人类面具	Flimsy Male Human Mask	1	0
+20567	节日/玩具	女性巨魔面具	Flimsy Female Troll Mask	1	0
+20568	节日/玩具	男性巨魔面具	Flimsy Male Troll Mask	1	0
+20569	节日/玩具	女性兽人面具	Flimsy Female Orc Mask	1	0
+20570	节日/玩具	男性兽人面具	Flimsy Male Orc Mask	1	0
+20571	节日/玩具	女性牛头人面具	Flimsy Female Tauren Mask	1	0
+20572	节日/玩具	男性牛头人面具	Flimsy Male Tauren Mask	1	0
+20573	节日/玩具	男性亡灵面具	Flimsy Male Undead Mask	1	0
+20574	节日/玩具	女性亡灵面具	Flimsy Female Undead Mask	1	0
+20583	节日/玩具	Sturdy Female Dwarf Mask	Sturdy Female Dwarf Mask	45	0
+20584	节日/玩具	Sturdy Female Gnome Mask	Sturdy Female Gnome Mask	45	0
+20585	节日/玩具	Sturdy Female Human Mask	Sturdy Female Human Mask	45	0
+20586	节日/玩具	Sturdy Female Nightelf Mask	Sturdy Female Nightelf Mask	45	0
+20587	节日/玩具	Sturdy Female Orc Mask	Sturdy Female Orc Mask	45	0
+20588	节日/玩具	Sturdy Female Tauren Mask	Sturdy Female Tauren Mask	45	0
+20589	节日/玩具	Sturdy Female Troll Mask	Sturdy Female Troll Mask	45	0
+20590	节日/玩具	Sturdy Female Undead Mask	Sturdy Female Undead Mask	45	0
+20591	节日/玩具	Sturdy Male Dwarf Mask	Sturdy Male Dwarf Mask	45	0
+20592	节日/玩具	Sturdy Male Gnome Mask	Sturdy Male Gnome Mask	45	0
+20593	节日/玩具	Sturdy Male Human Mask	Sturdy Male Human Mask	45	0
+20594	节日/玩具	Sturdy Male Nightelf Mask	Sturdy Male Nightelf Mask	45	0
+20595	节日/玩具	Sturdy Male Orc Mask	Sturdy Male Orc Mask	45	0
+20596	节日/玩具	Sturdy Male Tauren Mask	Sturdy Male Tauren Mask	45	0
+20597	节日/玩具	Sturdy Male Troll Mask	Sturdy Male Troll Mask	45	0
+20598	节日/玩具	Sturdy Male Undead Mask	Sturdy Male Undead Mask	45	0
+20692	废弃未实装	万色指环	Multicolored Band	60	55
+20693	废弃未实装	增重披风	Weighted Cloak	60	55
+20694	废弃未实装	闪光黑色宝珠	Glowing Black Orb	60	55
+20695	废弃未实装	深渊作战法珠	Abyssal War Beads	63	58
+20696	废弃未实装	水晶尖刺槌	Crystal Spiked Maul	63	58
+20698	废弃未实装	元素协调之刃	Elemental Attuned Blade	63	58
+20706	废弃未实装	塞纳里奥预备兵短裤	Cenarion Reservist's Pants	63	0
+20720	废弃未实装	黑暗密语之刃	Dark Whisper Blade	65	60
+20721	废弃未实装	信徒指环	Band of the Cultist	65	60
+20722	废弃未实装	水晶掷弹器	Crystal Slugthrower	65	60
+21125	开发占位	Ahn'Qiraj Staff [PH]	Ahn'Qiraj Staff [PH]	75	60
+21457	废弃未实装	野蛮护腕	Bracers of Brutality	72	60
+21639	废弃未实装	冷酷者肩铠	Pauldrons of the Unrelenting	77	60
+21890	废弃未实装	堕落预言者手套	Gloves of the Fallen Prophet	75	60
+22279	废弃未实装	可爱的黑裙子	Lovely Black Dress	1	0
+22742	血帆声望	血帆衬衫	Bloodsail Shirt	1	1
+22744	血帆声望	血帆长靴	Bloodsail Boots	1	1
+22745	血帆声望	血帆短裤	Bloodsail Pants	1	1
