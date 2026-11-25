@@ -1,7 +1,7 @@
 -- QuestGear 角色创建自带装备表（build_special.py 自动生成，勿手改）
 -- 来源：CharStartOutfit.dbc（经典 1.12 客户端起始装束），字段 2..13 的物品槽
 -- 说明：这是客户端 DBC 的客观事实数据，不是 item_template.flags 猜测。
-QuestGearStartItemsMeta = {v="qgsi-1",count=64,built="2026-11-23 23:26:09"}
+QuestGearStartItemsMeta = {v="qgsi-1",count=64,built="2026-11-25 15:38:37"}
 
 QuestGearStartItems = {
   [25]={n="破损的短剑",who="人类：战士；暗夜精灵：战士；亡灵：战士；侏儒：战士；德莱尼：猎人"},
