@@ -84,10 +84,11 @@ jobs:
           echo "building version=$VERSION"
           # ① 主数据 9 张表（QuestieDB + 品质库）
           python3 full_build.py --meta-out ../meta.json --version "$VERSION"
-          # ②~⑦ 其余 6 张表：Data -> Sources -> Crafts -> Special -> LostItems；QuestInfo/Stats 只依赖 Data
-          python3 build_stats.py
-          python3 build_quest_info.py
+          # ②~⑦ 其余 6 张表。注意依赖顺序：
+          #   build_sources 必须排在 build_quest_info 之前——后者直接读它下载的 ClassicDB_base.sql
+          python3 build_stats.py                       # 只依赖 Data + 品质表
           python3 build_sources.py                     # 自带下载器从 jsDelivr 补 SQL；4 份 locale 基线已有会跳过
+          python3 build_quest_info.py                  # 依赖 build_sources 产出的 ClassicDB_base.sql
           python3 build_crafts.py                      # 依赖 Sources + QuestDB.zip（基线）
           python3 build_special.py                     # 依赖 Sources + Crafts，产出 StartItems/Extras
           python3 build_lost_items.py                  # 依赖 Special 的清单，重写 Extras

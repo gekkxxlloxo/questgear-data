@@ -45,8 +45,8 @@ cd build
 pip install cbor2
 python3 full_build.py --meta-out ../meta.json --version qg-<tag>
 python3 build_stats.py
-python3 build_quest_info.py
-python3 build_sources.py          # 联网补 CMaNGOS SQL；locale 用基线
+python3 build_sources.py          # 联网补 CMaNGOS SQL；locale 用基线（必须先于 quest_info）
+python3 build_quest_info.py       # 依赖 build_sources 产出的 ClassicDB_base.sql
 python3 build_crafts.py
 python3 build_special.py
 python3 build_lost_items.py
