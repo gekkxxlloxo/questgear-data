@@ -26,7 +26,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install deps
-        run: pip install cbor2
+        run: pip install cbor2 lupa   # verify_data.py -> strict_wow.make_env2() 需要 lupa 做 Lua 语法校验
 
       # ---------- 1. 下载在线数据源 ----------
       - name: Download QuestieDB Forever (latest release)
@@ -57,6 +57,10 @@ jobs:
           test -f "$DEST/QuestieDB_Forever.toc"
           test -f "$DEST/support/Forever/Zones/areaIdToUiMapId.lua"
           test -f "$DEST/support/Forever/QuestXP/xpDB-classic.lua"
+          # 版本号用 TOC 里的 BUILD-COMMIT 前8位（本地 qg_sync 的正则是 qg-<hex>，不接受 tag 名）
+          COMMIT=$(grep '^## X-BUILD-COMMIT:' "$DEST/QuestieDB_Forever.toc" | head -1 | sed 's/.*: *//' | tr -d '\r')
+          echo "upstream commit=$COMMIT"
+          echo "commit=$COMMIT" >> $GITHUB_OUTPUT
 
       - name: Download item quality tables
         run: |
@@ -80,8 +84,8 @@ jobs:
         run: |
           set -euo pipefail
           cd build
-          VERSION="qg-${{ steps.qdb.outputs.tag }}"
-          echo "building version=$VERSION"
+          VERSION="qg-${{ steps.qdb.outputs.commit }}"
+          echo "building version=$VERSION (release ${{ steps.qdb.outputs.tag }})"
           # ① 主数据 9 张表（QuestieDB + 品质库）
           python3 full_build.py --meta-out ../meta.json --version "$VERSION"
           # ②~⑦ 其余 6 张表。注意依赖顺序：

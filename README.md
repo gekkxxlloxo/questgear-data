@@ -36,14 +36,14 @@
 
 - 本地 `qg_sync.py`（Windows 计划任务每天 06:00）从**根目录**拉 `QuestGearData.lua` + `meta.json`，做 L1 下载 / L2 交叉校验（版本+计数+source）/ L3 原子替换。
 - 因此 CI 每次重建后必须把产物同时写到根目录与 `build/`，二者版本与计数一致。
-- 版本号跟随上游 release tag（如 `qg-v1.1.6`）；上游无新 release 且构建逻辑无变化时内容不变，CI 跳过提交。
+- 版本号用 TOC 里的 `X-BUILD-COMMIT` 前 8 位（形如 `qg-933ec77a`）——本地 `qg_sync.py` 的版本正则是 `qg-<hex>`，不接受 `qg-v1.1.6` 这种 tag 名。上游无新 commit 且构建逻辑无变化时内容不变，CI 跳过提交。
 
 ## 恢复/手动重建
 
 ```bash
 cd build
 pip install cbor2
-python3 full_build.py --meta-out ../meta.json --version qg-<tag>
+python3 full_build.py --meta-out ../meta.json --version qg-<commit8>
 python3 build_stats.py
 python3 build_sources.py          # 联网补 CMaNGOS SQL；locale 用基线（必须先于 quest_info）
 python3 build_quest_info.py       # 依赖 build_sources 产出的 ClassicDB_base.sql
