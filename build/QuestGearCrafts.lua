@@ -726,4 +726,4 @@ QuestGearCrafts = {
   [22763]={p="",r=0,m={{n="魔化瑟银锭",c=8},{n="血藤",c=1},{n="生命精华",c=2}}},
   [22764]={p="",r=0,m={{n="魔化瑟银锭",c=6},{n="生命精华",c=2}}},
 }
-QuestGearCraftsMeta = {v="qgc-cmangos-1",count=722,built="2026-11-25 15:38:25"}
+QuestGearCraftsMeta = {v="qgc-cmangos-1",count=722,built="2026-11-26 11:36:51"}

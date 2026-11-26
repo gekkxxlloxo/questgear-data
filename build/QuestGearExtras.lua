@@ -1,6 +1,6 @@
 -- QuestGear 其它来源补充表（build_special.py + build_lost_items.py 自动生成，勿手改）
 -- b=要叠加的来源位（1任务/4世界掉落），b=0 表示仍留在「其他」但显示分类详情
-QuestGearExtrasMeta = {v="qge-2",count=288,built="2026-11-25 15:38:40"}
+QuestGearExtrasMeta = {v="qge-2",count=288,built="2026-11-26 11:37:09"}
 
 QuestGearExtras = {
   [876]={b=0,d="[废弃未实装] 废弃/未实装：早期设计稿或砍掉的掉落，正式服无获取；私服若有则由服主自定义投放，开源库查不到"},
