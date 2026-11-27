@@ -1,8 +1,8 @@
 -- QuestGear 全量数据（full_build.py 自动生成，勿手改）
 -- 源: QuestieDB(Forever) commit=4377c981ac368d1593ec92788218e0a689a6a02b build=2023-11-14T22:13:20Z
--- 构建: 2026-11-26 11:36:12 版本: qg-4377c981ac368d1593ec92788218e0a689a6a02b
+-- 构建: 2026-11-27 11:30:20 版本: qg-4377c981ac368d1593ec92788218e0a689a6a02b
 -- 字段: f=阵营(0中立/1联盟/2部落/3双方) q=品质(0差1白2绿3蓝4紫5橙) i=物品ID n=名 il=装等 rl=需求等级 c=类别(2武器/4护甲) s=子类 t=槽位 r=职业限制(内部key列表,nil=不限)
-QuestGearMeta = {v="qg-4377c981ac368d1593ec92788218e0a689a6a02b",built="2026-11-26 11:36:12",source="4377c981ac368d1593ec92788218e0a689a6a02b",tasks=1219,gear=2257,chains=1134}
+QuestGearMeta = {v="qg-4377c981ac368d1593ec92788218e0a689a6a02b",built="2026-11-27 11:30:20",source="4377c981ac368d1593ec92788218e0a689a6a02b",tasks=1219,gear=2257,chains=1134}
 
 QuestGearData = {
   [21]={n="回音山清剿行动",l=1,max=5,series=9,c={4},f=1,gear={{i=2186,q=1,n="旅行腰带",il=5,rl=nil,c=4,s=2,t="腰带",r=nil},{i=2691,q=1,n="旅行之靴",il=5,rl=nil,c=4,s=3,t="靴",r=nil},{i=11192,q=1,n="旅行手套",il=5,rl=nil,c=4,s=1,t="手套",r=nil}}},
